@@ -1,7 +1,9 @@
 streamlit==1.30.0
-ultralytics==8.3.65
+ultralytics==8.1.0
 torch==2.5.1
 opencv-python-headless==4.8.1.78
 Pillow==10.1.0
 numpy==1.26.1
 altair==5.5.0
+fastapi==0.104.1
+pydantic==1.10.9
