@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-# Pastikan libGL.so.1 tersedia untuk OpenCV
+# Pastikan libGL.so.1 tersedia agar OpenCV tidak error
 try:
     subprocess.run(["apt-get", "update"], check=True)
     subprocess.run(["apt-get", "install", "-y", "libgl1-mesa-glx"], check=True)
@@ -19,8 +19,8 @@ import gdown
 
 # Fungsi untuk mengunduh model dari Google Drive jika belum ada
 def download_model():
-    model_url = "https://drive.google.com/uc?id=YOUR_FILE_ID"  # Ganti dengan File ID model di Google Drive
-    model_path = "best_yolov9e(100)_2.pt"
+    model_url = "https://drive.google.com/file/d/1DSYPws_YxzAcNUTUdCSZMPijW6qavtNw/view?usp=sharing"  # Ganti dengan File ID model di Google Drive
+    model_path = "SGD x 640 x 0.0005 x 80 15 5.pt"
 
     if not os.path.exists(model_path):
         gdown.download(model_url, model_path, quiet=False)
